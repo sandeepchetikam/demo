@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON DATA</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="JSON.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="JSON.js"></script>
+  <style type="text/css">
+  	input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+  </style>
+</head>
+<body>
+	<div class="container-fluid">
+		
+			<br><button class="btn btn-lg btn-info" id="addbtn">ADD DATA</button><br><br>
+			<!--Table -->
+			<table class="table table-responsive table-striped table-bordered table-inverse" id="table1">
+			<thead>
+				<tr>
+				<th>#</th>
+				<th>NAME</th>	
+				<th>GENDER</th>
+				<th>Phone</th>
+				<th>Address</th>
+				<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td contenteditable="false" class="form_id"></td>
+					<td contenteditable="false">SANDEEP</td>
+					<td contenteditable="false">Male</td>
+					<td contenteditable="false">8885296268</td>
+					<td contenteditable="false">44-24-4,railway new colony, vskp-16</td>
+					<td  class="col-md-1"><button id="button1" style="height: 30px; width: 30px;" onClick="$(this).closest('tr').remove();" class="btn-danger btn-md"><i class="fa fa-trash-o" aria-hidden="true" data-toggle="tooltip" title="Remove"></i></button>
+					<button style="height: 30px; width: 50px;" class="btn-warning btn-md editRow button2"><i class="fa fa-pencil-square-o" aria-hidden="true" data-toggle="tooltip" title="Edit"></i></button></td>
+					
+				</tr>
+			</tbody>
+				
+			
+			</table>
+		<!--Form -->
+		<div class="container ">
+			<form class="form-horizontal" id="form1" novalidate>
+		<div class="form-group">
+		
+		<label class="control-label col-md-2" for="name"> Name : </label>
+		<div class="col-md-8 ">
+		<input type="text" id="name" for="name" name="name" placeholder="Enter your name" class="form-control">
+		</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-md-2" for="gender"> Gender : </label>
+			<div class="col-md-8">
+				<label class="control-label col-md-2"><input type="radio" value="Male" id="M" name="gender">  Male</label>
+				<label class="control-label col-md-2"><input type="radio" id="F" value="Female" name="gender">  female</label>
+			</div>
+		</div>
+
+		<div class="form-group">
+		<label class="control-label col-md-2" for="age">Phone : </label>
+		<div class="col-md-3">
+			<input type="number" id="phoneno" class="form-control" name="phoneno" pattern="[0-9.]+" name="age" for="age" placeholder="please Enter your age">
+		</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-md-2" for="address">Address : </label>
+			<div class="col-md-8">
+				<textarea class="form-control" name="address" id="address" placeholder="enter your address" rows="2" required></textarea><br>
+			</div>
+			<div class=" col-md-offset-2 col-md-3 "><button class="btn btn-info" type="submit" id="submitbtn">Submit</button></div>
+			<div class=" col-md-3 "><button class="btn btn-danger" type="reset" id="cancelbtn">cancel</button></div>
+		</div>
+	</form>	
+	</div>		
+</div>
+
+
+
+	
+</script>
+</body>
+</html>
